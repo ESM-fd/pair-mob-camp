@@ -26,7 +26,7 @@
       <v-icon dark>mdi-plus</v-icon>
     </v-btn>
   </div>
-</template>
+  </template>
 
 <script>
 export default {
