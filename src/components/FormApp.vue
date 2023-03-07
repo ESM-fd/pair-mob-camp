@@ -9,10 +9,12 @@
     <v-text-field
       label="題目"
       type="input"
+      v-model="memoData.title"
     ></v-text-field>
     <v-textarea
       label="メモ内容"
       name="input-7-1"
+      v-model="memoData.memo"
     ></v-textarea>
     <v-btn
       dark
@@ -29,10 +31,14 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+      memoData: { title: '', memo: '' }
+    }
   },
-  created () {},
-  computed: {},
-  methods: {}
+  methods: {
+    addInput () {
+      // TODO:データベースへの保存処理
+    }
+  }
 }
 </script>
