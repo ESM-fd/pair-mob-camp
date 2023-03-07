@@ -6,15 +6,18 @@
     hide-default-header
     class="elevation-1"
   ></v-data-table>
-
-  <v-btn
-    color="primary"
-    fab
-    small
-    dark
-    >
-    <v-icon>mdi-pencil</v-icon>
-  </v-btn>
+  <v-row>
+    <v-btn
+      color="primary"
+      fab
+      small
+      dark
+      class="ml-auto"
+      @click="addNewItem"
+      >
+      <v-icon>mdi-pencil</v-icon>
+    </v-btn>
+  </v-row>
   </div>
 </template>
 
