@@ -1,6 +1,5 @@
 <template>
   <div>
-    メモ帳アプリ
     <List />
   </div>
 </template>

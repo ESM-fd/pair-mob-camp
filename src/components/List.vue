@@ -1,9 +1,9 @@
 <template>
   <div>
-   一覧表示するよ
    <v-data-table
     :headers="headers"
     :items="items"
+    hide-default-header
     class="elevation-1"
   ></v-data-table>
   </div>
@@ -14,27 +14,15 @@ export default {
   data () {
     return {
       headers: [
-        {
-          text: 'Dessert (100g serving)',
-          align: 'start',
-          sortable: false,
-          value: 'name'
-        },
-        // { text: 'タイトル', value: 'title' },
         { value: 'title' },
-        { value: 'date' }
-        // { text: 'Carbs (g)', value: 'carbs' },
-        // { text: 'Protein (g)', value: 'protein' },
-        // { text: 'Iron (%)', value: 'iron' }
+        { value: 'date' },
+        { value: 'contents' }
       ],
       items: [
         {
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: 1
+          title: '合宿の計画',
+          date: '03/07',
+          contents: 'ペアモブの練習する'
         }
       ]
     }
