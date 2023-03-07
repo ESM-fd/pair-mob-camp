@@ -6,6 +6,15 @@
     hide-default-header
     class="elevation-1"
   ></v-data-table>
+
+  <v-btn
+    color="primary"
+    fab
+    small
+    dark
+    >
+    <v-icon>mdi-pencil</v-icon>
+  </v-btn>
   </div>
 </template>
 
