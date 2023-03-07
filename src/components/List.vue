@@ -1,11 +1,20 @@
 <template>
   <div>
-   <v-data-table
-    :headers="headers"
-    :items="items"
-    hide-default-header
-    class="elevation-1"
-  ></v-data-table>
+    <v-text-field
+      v-model="search"
+      append-icon="mdi-magnify"
+      label="Search"
+      single-line
+      hide-details
+      ></v-text-field>
+    <v-data-table
+      :headers="headers"
+      :items="items"
+      :search="search"
+      hide-default-header
+      hide-default-footer
+      class="elevation-1"
+    ></v-data-table>
   <v-row>
     <v-btn
       color="primary"
@@ -25,10 +34,11 @@
 export default {
   data () {
     return {
+      search: '',
       headers: [
         { value: 'title' },
-        { value: 'date' },
-        { value: 'contents' }
+        { value: 'date', filterable: false },
+        { value: 'contents', filterable: false }
       ],
       items: [
         {
