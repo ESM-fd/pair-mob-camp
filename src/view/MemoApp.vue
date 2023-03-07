@@ -1,6 +1,6 @@
 <template>
   <div>
-    メモ帳アプリだよ
+    メモ帳アプリを作るよ
   </div>
 </template>
 
