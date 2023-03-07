@@ -1,8 +1,13 @@
 <template>
   <div>
-    メモ帳アプリだよ
+    <v-text-field
+      type="input"
+    ></v-text-field>
+    <v-textarea
+      name="input-7-1"
+    ></v-textarea>
   </div>
-</template>
+  </template>
 
 <script>
 export default {
