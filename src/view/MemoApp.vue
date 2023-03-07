@@ -1,37 +1,22 @@
 <template>
   <div>
-    <v-btn
-      color="blue"
-      dark
-      >
-      完了
-    </v-btn>
-    <v-row v-for="memo in memoList" :key="memo.id">
-      <v-text-field
-        label="題目"
-        type="input"
-      ></v-text-field>
-      <v-textarea
-        label="メモ内容"
-        name="input-7-1"
-      ></v-textarea>
-    </v-row>
-    <v-btn
-      dark
-      small
-      color="grey"
-      class="ma-2"
-      @click="addInput()"
-    >
-      <v-icon dark>mdi-plus</v-icon>
-    </v-btn>
+    <formApp-component
+      @addMemo='addMemo'
+    ></formApp-component>
   </div>
-  </template>
+</template>
 
 <script>
+import FormApp from '../components/FormApp.vue'
 export default {
+  components: {
+    'formApp-component': FormApp
+  },
   data () {
-    return {}
+    return {
+    // // メモ入力画面の表示制御用
+    // isFormVisible: false
+    }
   },
   created () {},
   computed: {},
