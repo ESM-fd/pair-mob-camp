@@ -40,25 +40,31 @@ export default {
   methods: {
     // 新規登録ボタンのイベント
     addNewItem () {
-      this.isFormVisible = true
-      this.isListVisible = false
+      this.displayFormApp()
+      this.memoData = {}
     },
     // 完了ボタンのイベント
     saveMemo () {
-      this.isFormVisible = false
-      this.isListVisible = true
+      this.displayList()
     },
     // 削除ボタンのイベント
     deleteMemo () {
-      this.isFormVisible = false
-      this.isListVisible = true
+      this.displayList()
     },
     // 行クリック編集のイベント
     modifyItem (row) {
-      this.isFormVisible = true
-      this.isListVisible = false
+      this.displayFormApp()
       this.memoData.title = row.title
       this.memoData.memo = row.contents
+    },
+    // 画面表示制御
+    displayFormApp () {
+      this.isFormVisible = true
+      this.isListVisible = false
+    },
+    displayList () {
+      this.isFormVisible = false
+      this.isListVisible = true
     }
   }
 }

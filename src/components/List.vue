@@ -46,6 +46,16 @@ export default {
           title: '合宿の計画',
           date: '03/07',
           contents: 'ペアモブの練習する'
+        },
+        {
+          title: '今日の予定',
+          date: '03/07',
+          contents: '夕ご飯を食べる'
+        },
+        {
+          title: '明日の予定',
+          date: '03/08',
+          contents: 'データ格納作業'
         }
       ]
     }
