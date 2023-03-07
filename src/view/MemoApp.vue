@@ -1,11 +1,16 @@
 <template>
   <div>
-    メモ帳アプリを作るよ
+    メモ帳アプリ
+    <List />
   </div>
 </template>
 
 <script>
+import List from '../components/List'
 export default {
+  components: {
+    List
+  },
   data () {
     return {}
   },
