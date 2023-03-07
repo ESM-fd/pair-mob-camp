@@ -57,10 +57,14 @@ export default {
         // 更新関数を呼び出す
         console.log('更新するよ')
       }
+      // フォーム画面のクローズ
+      this.$emit('saveMemo')
     },
     deleteMemo () {
       // TODO:データベースの削除処理
       console.log('削除するよ')
+      // フォーム画面のクローズ
+      this.$emit('deleteMemo')
     }
   }
 }

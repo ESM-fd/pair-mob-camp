@@ -14,6 +14,7 @@
       hide-default-header
       hide-default-footer
       class="elevation-1"
+      @click:row='modifyItem'
     ></v-data-table>
   <v-row>
     <v-btn
@@ -52,6 +53,10 @@ export default {
   methods: {
     addNewItem () {
       this.$emit('addNewItem')
+    },
+    modifyItem (row) {
+      console.log(row)
+      this.$emit('modifyItem', row)
     }
   }
 }
