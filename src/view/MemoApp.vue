@@ -1,6 +1,8 @@
 <template>
   <div>
     <formApp-component
+      :isNew='isNew'
+      :memoData='memoData'
       @addMemo='addMemo'
     ></formApp-component>
   </div>
@@ -14,6 +16,10 @@ export default {
   },
   data () {
     return {
+      // 新規更新フラグ
+      isNew: false,
+      // メモデータ
+      memoData: { title: '', memo: '' }
     // // メモ入力画面の表示制御用
     // isFormVisible: false
     }
